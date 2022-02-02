@@ -34,6 +34,10 @@
 .modal-container span{
     margin: 14px 0;
     color: #a7a7a7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   
 }
 
 .modal-button{
