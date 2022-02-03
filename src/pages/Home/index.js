@@ -5,6 +5,7 @@ import './home.css';
 import Menu from '../../components/Menu';
 import ModalLink from '../../components/ModalLink';
 import api from '../../services/api';
+import { saveLink } from '../../services/storeLinks'
 
 function Home() {
     const [link, setLink] = useState('');
@@ -18,6 +19,7 @@ function Home() {
             })
             setData(response.data);
             setShowModal(true);
+            saveLink('links', response.data);
             setLink('');
         } catch (err) {
             console.log(err)
